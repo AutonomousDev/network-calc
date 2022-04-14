@@ -98,6 +98,7 @@ function Two_computer_transmission() {
     return (
         <div>
             <form>
+                <div class="m-5">
                 <p>Given a link with a maximum transmission rate of
                     <input type="number" id="transmission_rate" name="transmission_rate" onChange={(e) => set_transmission_rate(e.target.value)} />
                     <select name="transmission_rate_unit" id="transmission_rate_unit" onChange={(e) => set_transmission_rate_unit(e.target.value)}>
@@ -109,6 +110,7 @@ function Two_computer_transmission() {
                     </select>
                     . Only two computers, X and Y, wish to transmit starting at time t = 0 seconds.
                 </p>
+                </div>
                 <p>
                     Computer X sends FileX (
                     <input type="number" id="fileX_size" name="fileX_size" onChange={(e) => set_fileX_size(e.target.value)} />
