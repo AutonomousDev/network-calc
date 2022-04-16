@@ -17,7 +17,7 @@ function PersistentHTTP() {
         <div class="">
             <h1>Persistent HTTP</h1>
             <form>
-                <p>A client’s browser sends an HTTP request to a website. The website responds with a handshake
+                <p>A client's browser sends an HTTP request to a website. The website responds with a handshake
                     and sets up a TCP connection. The connection setup takes 
                     <input type="number" id="set_connection_setup" onChange={(e) => set_connection_setup(e.target.value)} /> 
                     <select name="time_unit" id="time_unit" onChange={(e) => set_time_unit(e.target.value)}>
@@ -27,10 +27,10 @@ function PersistentHTTP() {
 
                     </select>
                     , including the RTT. The browser
-                    then sends the request for the website’s index file. The index file references 
+                    then sends the request for the website's index file. The index file references 
                     <input type="number" id="set_image_count" onChange={(e) => set_image_count(e.target.value)} /> 
                     additional
-                    images, which are to be requested/downloaded by the client’s browser. How many requests
+                    images, which are to be requested/downloaded by the client's browser. How many requests
                     (including the initial request) must be sent by the browser...</p>
             </form>
 
@@ -39,7 +39,7 @@ function PersistentHTTP() {
             <ul>
 
                 <li>Request 1: Request to set up a TCP connection</li>
-                <li>Request 2: Request to get the website’s index file</li>
+                <li>Request 2: Request to get the website's index file</li>
                 <li>Request 3: Request for first object #1</li>
                 <li>Request 4: Request for object #2</li>
                 <li>...</li>
@@ -51,7 +51,7 @@ function PersistentHTTP() {
             <ul>
 
                 <li>Request 1: Request to set up a TCP connection</li>
-                <li>Request 2: Request to get the website’s index file</li>
+                <li>Request 2: Request to get the website's index file</li>
                 <li>Request 3: Request to set up a TCP connection for first object #1</li>
                 <li>Request 4: Request for first object #1</li>
                 
