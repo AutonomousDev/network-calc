@@ -13,24 +13,24 @@ function EdianRepresentation() {
     const power4_sixteen = 65536;
 
     const DivSixteen = () => {
-        let result = [0,0,0,0,0]
-        let display_Helper = [0,0,0,0,0]
+        let result = [0, 0, 0, 0, 0]
+        let display_Helper = [0, 0, 0, 0, 0]
         let remaining_dns_id = dns_id
         display_Helper[0] = remaining_dns_id
-        result[0] = Math.floor(remaining_dns_id/power4_sixteen)
-        remaining_dns_id = remaining_dns_id%power4_sixteen
+        result[0] = Math.floor(remaining_dns_id / power4_sixteen)
+        remaining_dns_id = remaining_dns_id % power4_sixteen
         display_Helper[1] = remaining_dns_id
-        result[1] = Math.floor(remaining_dns_id/power3_sixteen)
-        remaining_dns_id = remaining_dns_id%power3_sixteen
+        result[1] = Math.floor(remaining_dns_id / power3_sixteen)
+        remaining_dns_id = remaining_dns_id % power3_sixteen
         display_Helper[2] = remaining_dns_id
-        result[2] = Math.floor(remaining_dns_id/power2_sixteen)
-        remaining_dns_id = remaining_dns_id%power2_sixteen
+        result[2] = Math.floor(remaining_dns_id / power2_sixteen)
+        remaining_dns_id = remaining_dns_id % power2_sixteen
         display_Helper[3] = remaining_dns_id
-        result[3] = Math.floor(remaining_dns_id/power1_sixteen)
-        remaining_dns_id = remaining_dns_id%power1_sixteen
+        result[3] = Math.floor(remaining_dns_id / power1_sixteen)
+        remaining_dns_id = remaining_dns_id % power1_sixteen
         display_Helper[4] = remaining_dns_id
-        result[4] = Math.floor(remaining_dns_id/power0_sixteen)
-        remaining_dns_id = remaining_dns_id%power0_sixteen
+        result[4] = Math.floor(remaining_dns_id / power0_sixteen)
+        remaining_dns_id = remaining_dns_id % power0_sixteen
 
         return [result, display_Helper]
 
@@ -38,19 +38,19 @@ function EdianRepresentation() {
     const [result, display_Helper] = DivSixteen()
 
 
-    let big_edian_hex= result[1].toString(16) + result[2].toString(16) + result[3].toString(16) + result[4].toString(16)
-    
+    let big_edian_hex = result[1].toString(16) + result[2].toString(16) + result[3].toString(16) + result[4].toString(16)
+
 
     const changeEndianness = (string) => {
         const result = [];
         let len = string.length - 2;
         while (len >= 0) {
-          result.push(string.substr(len, 2));
-          len -= 2;
+            result.push(string.substr(len, 2));
+            len -= 2;
         }
         return result.join('');
-}
-    let little_edian= changeEndianness(big_edian_hex)
+    }
+    let little_edian = changeEndianness(big_edian_hex)
 
 
     return (
@@ -59,7 +59,7 @@ function EdianRepresentation() {
             <form>
                 <p>1. For the following question, proper hexadecimal format is (0xYYYY) where Y will range in (0-9) or (A-F). Only proper formats will be accepted. </p>
                 <p>Suppose that we send a DNS request with ID #
-                    <input type="number" id="dnsID" onChange={(e) => set_dns_id(e.target.value)}/>.</p>
+                    <input type="number" id="dnsID" onChange={(e) => set_dns_id(e.target.value)} />.</p>
                 <p>a. What is the little-endian representation (hexadecimal)? </p>
                 <p>b. What is the big-endian representation (hexadecimal)?</p>
                 <p>c. Which representation is required for network communication? (Enter "1" or "2" without quotes) </p>
@@ -79,23 +79,21 @@ function EdianRepresentation() {
                 <li>16^4 = 65,536</li>
             </ul>
             <ul>
-
-                <li>{display_Helper[1]}/{power4_sixteen}={result[1]}</li>
-                <li>{display_Helper[2]}/{power4_sixteen}={result[2]}</li>
-                <li>{display_Helper[3]}/{power4_sixteen}={result[3]}</li>
-                <li>{display_Helper[4]}/{power4_sixteen}={result[4]}</li>
+                <li>{display_Helper[0]}/{power4_sixteen}={result[0]}</li>
+                <li>{display_Helper[1]}/{power3_sixteen}={result[1]}</li>
+                <li>{display_Helper[2]}/{power2_sixteen}={result[2]}</li>
+                <li>{display_Helper[3]}/{power1_sixteen}={result[3]}</li>
+                <li>{display_Helper[4]}/{power0_sixteen}={result[4]}</li>
 
             </ul>
-            
+
             Big Edian: 0x
             {big_edian_hex}
-            <br/>
+            <br />
             Little Edian: 0x
             {little_edian}
-          
-            
 
-
+            <p>Most of the internet protocols use big endian. </p>
         </div>
     );
 }
