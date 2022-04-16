@@ -7,6 +7,7 @@ import Two_computer_transmission from './pages/Two_computer_transmission';
 import ConvertBandwidth from './pages/ConvertBandwidth';
 import EdianRepresentation from './pages/edianRepresentation';
 import Home from './pages/Home';
+import PersistentHTTP from './pages/PersistentHTTP';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="two/" element={<Two_computer_transmission />} />
         <Route path="ConvertBandwidth/" element={<ConvertBandwidth/>} />
         <Route path="Edian/" element={<EdianRepresentation/>} />
+        <Route path="Persistent_HTTP/" element={<PersistentHTTP/>} />
       </Routes>
     </BrowserRouter>
   );

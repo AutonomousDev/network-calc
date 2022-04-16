@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import ConvertBandwidthCalc from "../components/ConvertBandwidth";
+
 
 function Home() {
     return (
         <div class="">
-            <h1>Home</h1>
+            <h1>non-persistent vs persistent HTTP</h1>
 
 
         </div>
