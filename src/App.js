@@ -8,6 +8,8 @@ import ConvertBandwidth from './pages/ConvertBandwidth';
 import EdianRepresentation from './pages/edianRepresentation';
 import Home from './pages/Home';
 import PersistentHTTP from './pages/PersistentHTTP';
+import Proxy from './pages/Proxy';
+import ConvertFileSize from './pages/ConvertFileSize';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="ConvertBandwidth/" element={<ConvertBandwidth/>} />
         <Route path="Edian/" element={<EdianRepresentation/>} />
         <Route path="Persistent_HTTP/" element={<PersistentHTTP/>} />
+        <Route path="Proxy/" element={<Proxy/>} />
+        <Route path="ConvertFileSize/" element={<ConvertFileSize/>} />
       </Routes>
     </BrowserRouter>
   );

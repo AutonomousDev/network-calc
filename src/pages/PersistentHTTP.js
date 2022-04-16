@@ -22,7 +22,7 @@ function PersistentHTTP() {
                     <input type="number" id="set_connection_setup" onChange={(e) => set_connection_setup(e.target.value)} /> 
                     <select name="time_unit" id="time_unit" onChange={(e) => set_time_unit(e.target.value)}>
                         <option value=""></option>
-                        <option value="Secounds">Secounds</option>
+                        <option value="Seconds">Seconds</option>
                         <option value="MS">MS</option>
 
                     </select>
