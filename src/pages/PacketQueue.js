@@ -28,7 +28,7 @@ function PacketQueue() {
 
     return (
         <div class="">
-            <h1>Persistent HTTP</h1>
+            <h1>Packet Queue</h1>
             <form>
                 <p>Suppose there are
                     <input type="number" id="set_packet_count" onChange={(e) => set_packet_count(e.target.value)} />
@@ -39,6 +39,7 @@ function PacketQueue() {
                         <option value="GiB">GiB</option>
                         <option value="MiB">MiB</option>
                         <option value="KiB">KiB</option>
+                        <option value="Byte">Byte</option> 
                         <option value="bit">bit</option>
                     </select>
                     .
@@ -71,7 +72,7 @@ function PacketQueue() {
             <p>
                 Since the answer must be in milliseconds with one decimal point precision, we must convert:
             </p>
-            {time_seconds} * 1000 ms / 1 s = {time_ms}
+            {time_seconds} * 1000 ms / 1 s = {time_ms} ms
 
         </div>
     );
