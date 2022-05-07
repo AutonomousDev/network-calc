@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import PersistentHTTP from './pages/PersistentHTTP';
 import Proxy from './pages/Proxy';
 import ConvertFileSize from './pages/ConvertFileSize';
+import CarryWraparound from './pages/CarryWraparound';
+import PacketQueue from './pages/PacketQueue';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="Persistent_HTTP/" element={<PersistentHTTP/>} />
         <Route path="Proxy/" element={<Proxy/>} />
         <Route path="ConvertFileSize/" element={<ConvertFileSize/>} />
+        <Route path="CarryWraparound/" element={<CarryWraparound/>} />
+        <Route path="PacketQueue/" element={<PacketQueue/>}/>
       </Routes>
     </BrowserRouter>
   );

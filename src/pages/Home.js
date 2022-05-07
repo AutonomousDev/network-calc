@@ -5,7 +5,7 @@ import React from "react";
 function Home() {
     return (
         <div class="">
-            <h1>non-persistent vs persistent HTTP</h1>
+            <h1>Home</h1>
 
 
         </div>

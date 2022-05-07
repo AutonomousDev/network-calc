@@ -194,17 +194,17 @@ function Two_computer_transmission() {
             <p>Total # of packets when FileX finishes transmitting =</p>
             {fileX_packets_rounded} packets + {fileY_packets_rounded}  = {fileX_packets_rounded + fileY_packets_rounded} packets
 
-            <p>Now, since a 24-byte packet header is also sent with each packet, the time it takes to send each file must account for this data to be sent as well.</p>
+            <p>Now, since a {packet_header_size}Byte packet header is also sent with each packet, the time it takes to send each file must account for this data to be sent as well.</p>
             <p>First compute the size, in bits, of each packet header and payload</p>
-            {packet_payload_size} Bytes + packet_header_size Bytes * {unit_Byte_to_bit} bits/Byte = {packet_total_size_bits}
+            {packet_payload_size} Bytes + {packet_header_size} Bytes * {unit_Byte_to_bit} bits/Byte = {packet_total_size_bits}
 
 
             <p>Finally, calculate the time for each file to finish transmitting.</p>
             <p>For the smaller file, FileY:</p>
-                ({packet_total_size_bits} bits * {fileY_finishes}) / {transmission_rate_bits} = {fileY_finish_time} secounds
+                ({packet_total_size_bits} bits * {fileY_finishes} packets) / {transmission_rate_bits} bps = {fileY_finish_time} seconds
 
             <p>For the larger file, FileX:</p>
-            ({packet_total_size_bits} bits * {fileX_finishes}) / {transmission_rate_bits} = {fileX_finish_time} secounds
+            ({packet_total_size_bits} bits * {fileX_finishes} packets) / {transmission_rate_bits} bps = {fileX_finish_time} seconds
             <p>Note: The maximum transmission rate of the link given in the problem statement was converted from Mbps to bits per second to align the units before performing the above calculations, but this hasn't been written out since it was learned during Week 1</p>
 
         </div>
