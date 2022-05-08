@@ -17,7 +17,7 @@ function ConvertFileSizeCalc(startUnit, endUnit, startAmount) {
         else if (file_size_unit === "MiB") {
           file_size_conversion = unit_MiB_to_KiB * unit_KiB_to_Byte * unit_Byte_to_bit;
         }
-        else if (file_size_unit === "Kib") {
+        else if (file_size_unit === "KiB") {
           file_size_conversion = unit_KiB_to_Byte * unit_Byte_to_bit;
         }
         else if (file_size_unit === "Byte") {

@@ -13,6 +13,7 @@ import ConvertFileSize from './pages/ConvertFileSize';
 import CarryWraparound from './pages/CarryWraparound';
 import PacketQueue from './pages/PacketQueue';
 import VOIP from './pages/VOIP';
+import AcknowledgeNumber from './pages/AcknowledgeNumber';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path="CarryWraparound/" element={<CarryWraparound/>} />
         <Route path="PacketQueue/" element={<PacketQueue/>}/>
         <Route path="VOIP/" element={<VOIP/>}/>
+        <Route path="AcknowledgeNumber/" element={<AcknowledgeNumber/>}/>
+
       </Routes>
     </BrowserRouter>
   );
